@@ -1,6 +1,6 @@
 import React, { useReducer, useEffect } from 'react'
 import ComponentA from './components/ComponentA'
-import { Context, state, reducer } from './store';
+import { Context, state, reducer, setTheme } from './store';
 
 import './App.scss';
 import { useClasses } from './hooks/useClasses';
@@ -36,7 +36,12 @@ function App() {
             </button>
         </nav>
         <div className="container">
-          <div className="circle"></div>
+          <div 
+            title="Action with default value"
+            className="circle" 
+            onClick={() => dispatch(setTheme())}
+          />
+          
           <ComponentA />
           <ComponentA />
           <ComponentA />
