@@ -1,0 +1,81 @@
+[v-cloak] {
+  display: none;
+}
+
+h1 {
+  transition: all ease .5s;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background: green;
+  border-radius: 50%;
+  transition: all ease .3s;
+  position: absolute;
+  right: 20px;
+  top: 50px;
+}
+
+body {
+  background-color: #F2F3F4;
+  color: #333;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  transition: background-color ease .25s;
+
+  &.loader-open {
+      overflow: hidden;
+  }
+
+  &.app {
+    &--theme-dark {
+      background-color: #606060;
+    }
+  
+    &--theme-light {
+      background-color: #FFAACC;
+
+      .circle {
+        transform: scale(1.5) translate(-50px, 150px);
+      }
+    }
+  }
+}
+
+
+.app .container {
+  min-height: calc(100vh - 62px);
+}
+
+.custom-file-input ~ .custom-file-label::after {
+  content: 'Examinar...' !important;
+}
+
+.user-select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.page-sidebar {
+  a.nav-link {
+      color: #606060;
+
+      &:not(.active):hover {
+          background: #E5EAEB;
+      }
+  }
+}
+
+a {
+  &.nav-link:not(.active):hover {
+      background: #EEE;
+  }
+  
+  &.disabled,
+  &[disabled] {
+      pointer-events: none;
+      cursor: default;
+  }
+}
