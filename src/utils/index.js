@@ -1,5 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export const pre = str => {
-    return <pre>{JSON.stringify(str, null, 2)}</pre>
-}
+  return <pre>{JSON.stringify(str, null, 2)}</pre>;
+};

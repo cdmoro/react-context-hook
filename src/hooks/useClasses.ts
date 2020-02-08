@@ -1,13 +1,16 @@
-type ClassesParam = Array<string | object> | object;
+export type ClassesParam = Array<string | object> | object;
 
 const isObject = (a: any): boolean => !!a && a.constructor === Object;
 
 const getClassesFromObject = (obj: object): string => {
   return Object.keys(obj)
     .filter(item => {
-      return typeof obj[item as keyof object] === "boolean" ? obj[item as keyof object] : false;
+      return typeof obj[item as keyof object] === "boolean"
+        ? obj[item as keyof object]
+        : false;
     })
-    .join(" ").trim();
+    .join(" ")
+    .trim();
 };
 
 const useClasses = (classes: ClassesParam): string => {

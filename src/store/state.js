@@ -1,4 +1,4 @@
 export const state = {
-    user: '',
-    theme: 'dark'
-}
+  userName: "Carlos",
+  theme: "dark"
+};
