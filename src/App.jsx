@@ -8,18 +8,21 @@ import About from "./pages/About";
 
 import "./App.scss";
 
-const useRouteGuard = () => {
+const useRouteGuard = callback => {
   let location = useLocation();
 
   useEffect(() => {
-    console.log(location);
+    callback(location);
   }, [location]);
 };
 
 function App() {
   const [store, dispatch] = useReducer(reducer, state);
   const themePrefix = "app--theme-";
-  useRouteGuard();
+  
+  useRouteGuard(location => {
+    console.log(location)
+  });
 
   const classes = useClasses([
     "navbar navbar-expand-lg",

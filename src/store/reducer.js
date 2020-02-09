@@ -3,7 +3,7 @@ export const reducer = (state, {type, payload}) => {
         case 'SET_USER':
             return {
                 ...state,
-                user: payload
+                userName: payload
             }
 
         case 'SET_THEME':

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../store";
 
-const About = () => {
+const About = (): JSX.Element => {
   const { store } = useContext(Context);
 
   return (
